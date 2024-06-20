@@ -1,0 +1,47 @@
+* { 
+	box-sizing: border-box;
+}
+
+header {
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+.nav-item {
+    margin-left: 80px;
+}
+
+.nav-item > a {
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#Logo {
+    stroke: black;
+    stroke-width: 2px;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    overflow: visible;
+}
+
+body {
+    height: 200vh;
+}
