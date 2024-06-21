@@ -1,47 +1,50 @@
-* { 
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-header {
-    border: 1px solid black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+html {
+  margin: 0;
 }
 
-#navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+body header {
+  border-bottom: 1px solid gold;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
 }
-
-.nav-list {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin-right: 50px;
+body header nav#navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
 }
-
-.nav-item {
-    margin-left: 80px;
+body header nav#navbar svg#logo-navbar {
+  height: 90%;
+  stroke: gold;
+  stroke-width: 1.5px;
+  margin: 5px;
+  overflow: visible;
 }
-
-.nav-item > a {
-    text-decoration: none;
-    font-size: 30px;
+body header nav#navbar .nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-right: 50px;
 }
-
-#Logo {
-    stroke: black;
-    stroke-width: 2px;
-    width: 80px;
-    height: 80px;
-    margin: 5px;
-    overflow: visible;
+body header nav#navbar .nav-list .nav-item {
+  margin-left: 80px;
 }
-
-body {
-    height: 200vh;
+body header nav#navbar .nav-list .nav-item a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
 }
+body #hero-section {
+  height: calc(100vh - 80px);
+  background-color: black;
+  border-bottom: 3px solid green;
+}/*# sourceMappingURL=styles.css.map */

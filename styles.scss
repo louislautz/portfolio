@@ -1,0 +1,66 @@
+* { 
+	box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+}
+
+// Variables
+$navbar-height: 80px;
+$background-color: black;
+$primary-color: grey;
+$font-color: white;
+$accent-color: gold;
+
+body {
+
+    header {
+        border-bottom: 1px solid $accent-color;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $navbar-height;
+        background-color: $background-color;
+        
+        nav#navbar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: $navbar-height;
+
+            svg#logo-navbar {
+                height: 90%;
+                stroke: $accent-color;
+                stroke-width: 1.5px;
+                margin: 5px;
+                overflow: visible;
+            }
+
+            .nav-list {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                margin-right: 50px;
+                
+                .nav-item {
+                    margin-left: 80px;
+                    
+                    a {
+                        text-decoration: none;
+                        font-size: 30px;
+                        color: $font-color;
+                    }
+                }
+            }
+        }
+    }
+
+    #hero-section {
+        height: calc(100vh - $navbar-height);
+        background-color: $background-color;
+        border-bottom: 3px solid green;
+    }
+}
