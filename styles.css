@@ -4,8 +4,23 @@
 
 html {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
+@keyframes logo_animation {
+  from {
+    transform: rotateX(30deg) rotateY(-15deg) rotateZ(17deg);
+  }
+  50% {
+    transform: rotateX(30deg) rotateY(15deg) rotateZ(17deg);
+  }
+  to {
+    transform: rotateX(30deg) rotateY(-15deg) rotateZ(17deg);
+  }
+}
+body {
+  margin: 0;
+}
 body header {
   border-bottom: 1px solid gold;
   position: relative;
@@ -13,7 +28,7 @@ body header {
   left: 0;
   width: 100%;
   height: 80px;
-  background-color: black;
+  background-color: white;
 }
 body header nav#navbar {
   display: flex;
@@ -41,10 +56,64 @@ body header nav#navbar .nav-list .nav-item {
 body header nav#navbar .nav-list .nav-item a {
   text-decoration: none;
   font-size: 30px;
-  color: white;
+  color: black;
+}
+body #logo-background {
+  position: fixed;
+  top: calc(50% - 150px);
+  right: 200px;
+  stroke: gold;
+  stroke-width: 1.5px;
+  overflow: visible;
+  width: 300px;
+  height: 300px;
+  transform: rotateX(30deg) rotateY(-15deg) rotateZ(17deg);
+  animation: logo_animation linear;
+  animation-timeline: scroll();
 }
 body #hero-section {
   height: calc(100vh - 80px);
-  background-color: black;
-  border-bottom: 3px solid green;
+  background-color: white;
+}
+body #hero-section #introduction {
+  position: absolute;
+  top: 35%;
+  margin-left: 100px;
+}
+body #hero-section #introduction #fullname .name {
+  margin: 0;
+  font-size: 55px;
+  font-weight: 1;
+  letter-spacing: 15px;
+}
+body #hero-section #introduction #fullname #lastname {
+  margin-left: 55px;
+}
+body #hero-section #introduction #job-title {
+  font-weight: 1;
+}
+body #hero-section #introduction #pitch {
+  margin-left: 40px;
+}
+body #hero-section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: calc(50vw - 25px);
+  bottom: 4%;
+  text-decoration: none;
+  color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+body #hero-section a svg {
+  stroke: black;
+  height: 25px;
+  width: 25px;
+}
+body #resume-section {
+  height: 2000px;
 }/*# sourceMappingURL=styles.css.map */
